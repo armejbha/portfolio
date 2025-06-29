@@ -17,40 +17,47 @@ const Banner = ({ scrollToAbout }) => {
       const centerX = rect.width / 2;
       const centerY = rect.height / 2;
 
-      // Calculate rotation based on cursor position
-      const rotateX = ((y - centerY) / centerY) * -15;
-      const rotateY = ((x - centerX) / centerX) * 15;
+      const maxMove = 20; // max movement in pixels
+
+      const moveX = Math.max(
+        -maxMove,
+        Math.min(maxMove, ((x - centerX) / centerX) * maxMove)
+      );
+      const moveY = Math.max(
+        -maxMove,
+        Math.min(maxMove, ((y - centerY) / centerY) * maxMove)
+      );
 
       gsap.to(wrapper, {
-        rotationX: rotateX,
-        rotationY: rotateY,
-        transformPerspective: 1000,
-        transformOrigin: "center",
+        x: moveX,
+        y: moveY,
+        scale: 1.03, // optional slight scale up on hover
         duration: 0.3,
         ease: "power2.out",
       });
     };
 
-    const resetRotation = () => {
+    const resetPosition = () => {
       gsap.to(wrapper, {
-        rotationX: 0,
-        rotationY: 0,
+        x: 0,
+        y: 0,
+        scale: 1,
         duration: 0.6,
         ease: "power2.out",
       });
     };
 
     wrapper.addEventListener("mousemove", handleMouseMove);
-    wrapper.addEventListener("mouseleave", resetRotation);
+    wrapper.addEventListener("mouseleave", resetPosition);
 
     return () => {
       wrapper.removeEventListener("mousemove", handleMouseMove);
-      wrapper.removeEventListener("mouseleave", resetRotation);
+      wrapper.removeEventListener("mouseleave", resetPosition);
     };
   }, []);
 
   return (
-    <div className="max-w-[1350px] mx-auto mt-5">
+    <div className="max-w-[1300px] mx-auto mt-5">
       <div>
         <h4 className="text-center text-3xl font-semibold">Hello, I'm</h4>
         <p className="md:hidden text-2xl text-[#ffc107] text-center font-bold mt-5">
@@ -65,8 +72,8 @@ const Banner = ({ scrollToAbout }) => {
             </p>
           </div>
 
-          {/* GSAP Cursor Tilt Section */}
-          <div className="col-span-2">
+          {/* GSAP Cursor Move Section */}
+          <div className="col-span-2 gsap-items">
             <div className="mx-auto w-fit perspective-[1000px]">
               <div
                 ref={imageWrapperRef}

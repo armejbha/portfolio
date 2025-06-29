@@ -39,7 +39,7 @@ const Navbar = () => {
 
   return (
     <nav className="">
-      <div className="navbar max-w-[1350px] mx-auto py-6">
+      <div className="navbar max-w-[1300px] mx-auto py-6">
         <div className="navbar-start">
           <a className="text-3xl font-bold">Abdur.</a>
         </div>
