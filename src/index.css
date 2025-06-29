@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
 @plugin "daisyui";
 
@@ -7,5 +7,12 @@
   font-family: "Jost", sans-serif;
   font-style: normal;
   font-weight: 400;
+  font-optical-sizing: auto;
+}
+
+.roboto {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   font-optical-sizing: auto;
 }

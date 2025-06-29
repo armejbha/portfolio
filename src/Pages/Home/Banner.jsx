@@ -1,41 +1,116 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
+import gsap from "gsap";
 import pic from "../../assets/abdur_rahim.png";
-const Banner = () => {
+import { FiChevronDown } from "react-icons/fi";
+
+const Banner = ({ scrollToAbout }) => {
+  const imageWrapperRef = useRef(null);
+
+  useEffect(() => {
+    const wrapper = imageWrapperRef.current;
+
+    const handleMouseMove = (e) => {
+      const rect = wrapper.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+
+      // Calculate rotation based on cursor position
+      const rotateX = ((y - centerY) / centerY) * -15;
+      const rotateY = ((x - centerX) / centerX) * 15;
+
+      gsap.to(wrapper, {
+        rotationX: rotateX,
+        rotationY: rotateY,
+        transformPerspective: 1000,
+        transformOrigin: "center",
+        duration: 0.3,
+        ease: "power2.out",
+      });
+    };
+
+    const resetRotation = () => {
+      gsap.to(wrapper, {
+        rotationX: 0,
+        rotationY: 0,
+        duration: 0.6,
+        ease: "power2.out",
+      });
+    };
+
+    wrapper.addEventListener("mousemove", handleMouseMove);
+    wrapper.addEventListener("mouseleave", resetRotation);
+
+    return () => {
+      wrapper.removeEventListener("mousemove", handleMouseMove);
+      wrapper.removeEventListener("mouseleave", resetRotation);
+    };
+  }, []);
+
   return (
     <div className="max-w-[1350px] mx-auto mt-5">
       <div>
         <h4 className="text-center text-3xl font-semibold">Hello, I'm</h4>
+        <p className="md:hidden text-2xl text-[#ffc107] text-center font-bold mt-5">
+          Abdur Rahim
+        </p>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-5 items-center mt-5">
-          <div>
-            <h3 className="text-4xl font-medium">Font-end Web Developer</h3>
-            <p className="text-[#DEE2E6BF] text-xl">
+          <div className="text-center md:text-left">
+            <h3 className="text-4xl font-medium">Front-end Web Developer</h3>
+            <p className="text-[#DEE2E6BF] text-xl mt-4">
               I craft responsive and innovative web interfaces using modern
               tools.
             </p>
           </div>
+
+          {/* GSAP Cursor Tilt Section */}
           <div className="col-span-2">
-            <div className="max-w-fit rounded-full mx-auto border-[1px] border-[#ffc10740] border-opacity-20 p-[6px]">
-              <div className="max-w-fit rounded-full mx-auto border-[1px] border-[#ffc10780] border-opacity-40 p-[6px]">
-                <div className="max-w-fit mx-auto rounded-full border-[1px] border-[#ffc107bf]  p-[6px]">
-                  <img
-                    className="bg-amber-50 w-[316px] h-[316px] object-cover rounded-full border border-[#ffc107]"
-                    src={pic}
-                    alt="Profile"
-                  />
+            <div className="mx-auto w-fit perspective-[1000px]">
+              <div
+                ref={imageWrapperRef}
+                className="w-fit transition-transform"
+                style={{ transformStyle: "preserve-3d" }}
+              >
+                <div className="rounded-full border-[1px] border-[#ffc10740] p-[6px]">
+                  <div className="rounded-full border-[1px] border-[#ffc10780] p-[6px]">
+                    <div className="rounded-full border-[1px] border-[#ffc107bf] p-[6px]">
+                      <img
+                        className="bg-amber-50 w-[316px] h-[316px] object-cover rounded-full border border-[#ffc107]"
+                        src={pic}
+                        alt="Profile"
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div>
+          <div className="text-center md:text-left">
             <h3 className="text-4xl font-medium">
               Based in Dhaka, Bangladesh.
             </h3>
-            <p className="text-[#DEE2E6BF] text-xl">
+            <p className="text-[#DEE2E6BF] text-xl mt-4">
               Open to opportunities worldwide — available for work.
             </p>
           </div>
         </div>
+        <h3 className="hidden md:block text-2xl md:text-[208px] text-[#ffc107] text-center font-bold ">
+          Abdur Rahim
+        </h3>
+        <button
+          onClick={scrollToAbout}
+          className="flex flex-col items-center mx-auto animate-bounce py-24"
+        >
+          <div className="w-px h-10 bg-gray-300 opacity-50"></div>
+
+          <FiChevronDown
+            size={24}
+            className="text-4xl text-gray-300 opacity-50 -mt-3"
+          />
+        </button>
       </div>
     </div>
   );
