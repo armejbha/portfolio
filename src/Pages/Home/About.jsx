@@ -12,7 +12,7 @@ const About = forwardRef((props, ref) => {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         <div className="text-center md:text-left">
-          <h3 className="text-4xl font-bold leading-normal">
+          <h3 className="text-4xl font-bold leading-normal tracking-wide">
             Hi, I’m <span className="text-[#ffc107]">Abdur Rahim</span> — a
             Front-End Developer{" "}
             <span className="text-[#DEE2E6BF]">
@@ -25,7 +25,7 @@ const About = forwardRef((props, ref) => {
           </p>
         </div>
         <div>
-          <p className="text-3xl text-center md:text-justify">
+          <p className="text-3xl text-center md:text-left tracking-wide">
             Web development isn’t just my career — it’s where I find joy and
             purpose. I love turning ideas into clean, interactive user
             experiences using HTML, CSS, JavaScript, and modern frameworks.
