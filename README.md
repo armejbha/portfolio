@@ -10,7 +10,7 @@ I’m a Frontend Web Developer passionate about creating responsive, accessible,
 
 ## 🚀 Live Site
 
-🔗 [https://your-portfolio-url.vercel.app](https://abudrrahim.vercel.app/)  
+🔗 [Site Link](https://abudrrahim.vercel.app/)  
 🧑‍💻 Built with: React + TailwindCSS + DaisyUI
 
 ---
@@ -46,11 +46,6 @@ I’m a Frontend Web Developer passionate about creating responsive, accessible,
 - 🧭 React Router DOM
 
 
-## 📸 Screenshots
-
-| Banner & Projects | Modal Details |
-|-------------------|---------------|
-| ![Banner](https://i.postimg.cc/RVqxHmth/Screenshot-2025-06-30-071612.png) | ![Details](https://i.postimg.cc/0Qr0CV0Y/Screenshot-2025-06-30-065930.png) |
 
 ---
 
