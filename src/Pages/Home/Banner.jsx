@@ -109,7 +109,7 @@ const Banner = ({ scrollToAbout }) => {
         </h3>
         <button
           onClick={scrollToAbout}
-          className="flex flex-col items-center mx-auto animate-bounce py-24"
+          className="flex flex-col items-center mx-auto animate-bounce my-24"
         >
           <div className="w-px h-10 bg-gray-300 opacity-50"></div>
 

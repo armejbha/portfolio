@@ -35,7 +35,7 @@ const Skills = () => {
       id: 3,
       img: tailwindcss,
       tip: "tailwindTip",
-      data: "TailwindCSS",
+      data: "Tailwind",
     },
     {
       id: 4,
@@ -53,7 +53,7 @@ const Skills = () => {
       id: 6,
       img: router,
       tip: "routerTip",
-      data: "ReactRouter",
+      data: "Router",
     },
     {
       id: 7,
@@ -65,13 +65,13 @@ const Skills = () => {
       id: 8,
       img: node,
       tip: "nodeTip",
-      data: "NodeJs",
+      data: "Node.Js",
     },
     {
       id: 9,
       img: express,
       tip: "expressTip",
-      data: "ExpressJs",
+      data: "Express.Js",
     },
     {
       id: 10,
@@ -103,16 +103,10 @@ const Skills = () => {
       tip: "githubTip",
       data: "GitHub",
     },
-    {
-      id: 15,
-      img: jwt,
-      tip: "jwtTip",
-      data: "JWT",
-    },
   ];
   console.log(icons);
   return (
-    <div className="max-w-[1300px] mx-auto py-24 px-2 md:px-0">
+    <div className="max-w-[1300px] mx-auto my-24 px-2 md:px-0">
       <div className="text-center">
         <span className="text-[#ffc107] text-xl">Expertise</span>
         <h3 className="text-4xl font-bold mt-2">SKILLS</h3>
@@ -120,18 +114,18 @@ const Skills = () => {
       <div className="flex justify-center py-12">
         <div className="w-px h-10 bg-gray-300 opacity-50"></div>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-5 gap-1 md:gap-8">
+      <div className="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-7 justify-center items-center mx-auto gap-1 md:gap-8">
         {icons.map((icon) => (
           <div
             key={icon.id}
             data-tooltip-id={icon.tip}
             data-tooltip-content={icon.data}
           >
-            <div className="bg-gray-800 p-5 md:p-10 rounded-2xl hover:scale-110 transition-all duration-300">
+            <div className="bg-gray-800 py-5 rounded-2xl hover:scale-110 transition-all duration-300">
               <img
                 src={icon.img}
                 alt={icons.data}
-                className="w-22 h-22 mx-auto"
+                className="w-10 h-10 mx-auto"
               />
               <h5 className="text-center mt-5 text-2xl font-semibold ">
                 {icon.data}
