@@ -57,7 +57,7 @@ const Banner = ({ scrollToAbout }) => {
   }, []);
 
   return (
-    <div className="max-w-[1300px] mx-auto mt-5">
+    <div id="home" className="max-w-[1300px] mx-auto mt-5">
       <div>
         <h4 className="text-center text-3xl font-semibold">Hello, I'm</h4>
         <p className="md:hidden text-2xl text-[#ffc107] text-center font-bold mt-5">

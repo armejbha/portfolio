@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
   const activeNav = ({ isActive }) => {
@@ -10,36 +10,76 @@ const Navbar = () => {
   const navLinks = (
     <>
       <li>
-        <NavLink className={activeNav} to="/">
+        <Link
+          to="home"
+          smooth={true}
+          duration={500}
+          spy={true}
+          offset={-80}
+          className="text-xl bg-transparent hover:text-[#ffc107] cursor-pointer"
+          activeClass="text-[#ffc107]"
+        >
           Home
-        </NavLink>
+        </Link>
       </li>
       <li>
-        <NavLink className={activeNav} to="/about">
+        <Link
+          to="about"
+          smooth={true}
+          duration={500}
+          spy={true}
+          offset={-80}
+          className="text-xl bg-transparent hover:text-[#ffc107] cursor-pointer"
+          activeClass="text-[#ffc107]"
+        >
           About
-        </NavLink>
+        </Link>
       </li>
       <li>
-        <NavLink className={activeNav} to="/skills">
+        <Link
+          to="skills"
+          smooth={true}
+          duration={500}
+          spy={true}
+          offset={-80}
+          className="text-xl bg-transparent hover:text-[#ffc107] cursor-pointer"
+          activeClass="text-[#ffc107]"
+        >
           Skills
-        </NavLink>
+        </Link>
       </li>
       <li>
-        <NavLink className={activeNav} to="/projects">
+        <Link
+          to="projects"
+          smooth={true}
+          duration={500}
+          spy={true}
+          offset={-80}
+          className="text-xl bg-transparent hover:text-[#ffc107] cursor-pointer"
+          activeClass="text-[#ffc107]"
+        >
           Projects
-        </NavLink>
+        </Link>
       </li>
       <li>
-        <NavLink className={activeNav} to="/contact">
+        <Link
+          to="contact"
+          smooth={true}
+          duration={500}
+          spy={true}
+          offset={-80}
+          className="text-xl bg-transparent hover:text-[#ffc107] cursor-pointer"
+          activeClass="text-[#ffc107]"
+        >
           Contact
-        </NavLink>
+        </Link>
       </li>
     </>
   );
 
   return (
-    <nav className="">
-      <div className="navbar max-w-[1300px] mx-auto py-6">
+    <nav className="sticky top-0 bg-[#1d232a] z-20">
+      <div className="navbar max-w-[1300px] mx-auto py-2">
         <div className="navbar-start">
           <a className="text-3xl font-bold">Abdur.</a>
         </div>
@@ -71,7 +111,9 @@ const Navbar = () => {
             <ul
               tabIndex={0}
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
-            ></ul>
+            >
+              {navLinks}
+            </ul>
           </div>
         </div>
       </div>

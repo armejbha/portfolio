@@ -2,7 +2,7 @@ import React, { forwardRef } from "react";
 
 const About = forwardRef((props, ref) => {
   return (
-    <div ref={ref} className="max-w-[1300px] mx-auto my-24 px-2 md:px-0">
+    <div id="about" ref={ref} className="max-w-[1300px] mx-auto my-24 px-2 md:px-0">
       <div className="text-center">
         <span className="text-[#ffc107] text-xl">Know me more</span>
         <h3 className="text-4xl font-bold mt-2">ABOUT ME</h3>

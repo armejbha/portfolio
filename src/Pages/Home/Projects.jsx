@@ -136,13 +136,13 @@ const Projects = () => {
       ],
 
       live: "https://react-authentication-65e2a.web.app/",
-      github: "https://github.com/armejbha/hobby-hub-client.git",
+      github: "https://github.com/armejbha/netcafe.git",
       img: "https://i.postimg.cc/RVqxHmth/Screenshot-2025-06-30-071612.png",
     },
   ];
 
   return (
-    <div className="max-w-[1300px] mx-auto my-24 px-4">
+    <div id="projects" className="max-w-[1300px] mx-auto my-24 px-4">
       <div className="text-center">
         <span className="text-[#ffc107] text-xl font-medium">My Work</span>
         <h3 className="text-4xl font-bold mt-2 text-white">PROJECTS</h3>

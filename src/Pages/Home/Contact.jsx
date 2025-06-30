@@ -6,7 +6,7 @@ const Contact = () => {
     e.preventDefault();
   };
   return (
-    <div className="max-w-[1300px] mx-auto my-24 px-2 md:px-0">
+    <div id="contact" className="max-w-[1300px] mx-auto my-24 px-2 md:px-0">
       <div className="text-center">
         <span className="text-[#ffc107] text-xl">Get In Touch</span>
         <h3 className="text-4xl font-bold mt-2">CONTACT</h3>
