@@ -9,7 +9,7 @@ const Footer = () => {
           <ul className="flex gap-10 justify-center items-center py-3">
             <li>
               <a
-                href=""
+                href="https://www.linkedin.com/in/armejbha/"
                 className="text-2xl font-semibold text-[#DEE2E6BF] hover:text-[#ffc107] hover:underline"
               >
                 LinkedIn
@@ -17,7 +17,7 @@ const Footer = () => {
             </li>
             <li>
               <a
-                href=""
+                href="https://github.com/armejbha"
                 className="text-2xl font-semibold text-[#DEE2E6BF] hover:text-[#ffc107] hover:underline "
               >
                 GitHub
@@ -25,7 +25,7 @@ const Footer = () => {
             </li>
             <li>
               <a
-                href=""
+                href="https://medium.com/@armejbha"
                 className="text-2xl font-semibold text-[#DEE2E6BF] hover:text-[#ffc107] hover:underline"
               >
                 Medium
@@ -33,7 +33,7 @@ const Footer = () => {
             </li>
             <li>
               <a
-                href=""
+                href="https://www.facebook.com/armejbha"
                 className="text-2xl font-semibold text-[#DEE2E6BF] hover:text-[#ffc107] hover:underline"
               >
                 Facebook
