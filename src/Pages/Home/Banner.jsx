@@ -66,7 +66,7 @@ const Banner = ({ scrollToAbout }) => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-5 items-center mt-5">
           <div className="text-center md:text-left">
             <h3 className="text-4xl font-medium">Front-end Web Developer</h3>
-            <p className="text-[#DEE2E6BF] text-xl mt-4">
+            <p className="text-[#8A8C8E] text-xl mt-4">
               I craft responsive and innovative web interfaces using modern
               tools.
             </p>
@@ -99,7 +99,7 @@ const Banner = ({ scrollToAbout }) => {
             <h3 className="text-4xl font-medium">
               Based in Dhaka, Bangladesh.
             </h3>
-            <p className="text-[#DEE2E6BF] text-xl mt-4">
+            <p className="text-[#8A8C8E]  text-xl mt-4">
               Open to opportunities worldwide — available for work.
             </p>
           </div>
@@ -111,11 +111,11 @@ const Banner = ({ scrollToAbout }) => {
           onClick={scrollToAbout}
           className="flex flex-col items-center mx-auto animate-bounce my-24"
         >
-          <div className="w-px h-10 bg-gray-300 opacity-50"></div>
+          <div className="w-px h-10 bg-gray-600 opacity-50"></div>
 
           <FiChevronDown
             size={24}
-            className="text-4xl text-gray-300 opacity-50 -mt-3"
+            className="text-4xl text-gray-600 opacity-50 -mt-3"
           />
         </button>
       </div>

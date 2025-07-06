@@ -142,10 +142,10 @@ const Projects = () => {
   ];
 
   return (
-    <div id="projects" className="max-w-[1300px] mx-auto my-24 px-4">
+    <div id="projects" className="max-w-[1300px] mx-auto my-24 px-4 md:px-0">
       <div className="text-center">
         <span className="text-[#ffc107] text-xl font-medium">My Work</span>
-        <h3 className="text-4xl font-bold mt-2 text-white">PROJECTS</h3>
+        <h3 className="text-4xl font-bold mt-2">PROJECTS</h3>
       </div>
 
       <div className="flex justify-center py-10">
@@ -156,7 +156,7 @@ const Projects = () => {
         {projects.map((project) => (
           <div
             key={project.id}
-            className="bg-gray-800 border border-gray-800 rounded-2xl overflow-hidden shadow-xl transition"
+            className="bg-gray-200 border border-gray-200 rounded-2xl overflow-hidden shadow-xl transition flex flex-col"
           >
             <div className="p-5">
               <img
@@ -165,11 +165,9 @@ const Projects = () => {
                 alt={project.name}
               />
             </div>
-            <div className="p-5 space-y-3">
-              <h2 className="text-2xl font-semibold text-white">
-                {project.name}
-              </h2>
-              <p className="text-lg text-gray-400 mt-2">
+            <div className="p-5 grid grid-rows-[auto_1fr_auto] h-full">
+              <h2 className="text-2xl font-semibold">{project.name}</h2>
+              <p className="text-lg text-gray-600 mt-2">
                 {project.description.slice(0, 90)}...
               </p>
               <button

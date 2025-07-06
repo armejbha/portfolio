@@ -78,8 +78,8 @@ const Navbar = () => {
   );
 
   return (
-    <nav className="sticky top-0 bg-[#1d232a] z-20">
-      <div className="navbar max-w-[1300px] mx-auto py-2">
+    <nav className="sticky top-0 bg-[#F2F2F2] z-20">
+      <div className="flex justify-between items-center max-w-[1300px] mx-auto py-2">
         <div className="navbar-start">
           <a className="text-3xl font-bold">Abdur.</a>
         </div>
@@ -87,7 +87,7 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1 space-x-2">{navLinks}</ul>
         </div>
         <div className="navbar-end">
-          <a className="px-4 py-2 border text-2xl rounded-lg hover:bg-white hover:text-black hover:cursor-pointer">
+          <a className="px-6 py-2 border border-[#8A8C8E]   text-2xl rounded-xl hover:bg-gray-200 hover:cursor-pointer">
             Resume
           </a>
           <div className="dropdown">

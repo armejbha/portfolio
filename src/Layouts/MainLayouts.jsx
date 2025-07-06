@@ -14,3 +14,6 @@ const MainLayouts = () => {
 };
 
 export default MainLayouts;
+
+// bg-[#F2F2F2]
+// text-[#8A8C8E]

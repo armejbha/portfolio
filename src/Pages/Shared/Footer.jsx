@@ -1,16 +1,17 @@
 import React from "react";
+import { Link } from "react-scroll";
 
 const Footer = () => {
   return (
     <div className="max-w-[1300px] mx-auto pt-24 pb-16">
       {/* social links  */}
       <div className="flex justify-center">
-        <div className="w-full md:w-4/5 border-y border-[#DEE2E6BF] px-4 py-2">
+        <div className="w-full md:w-4/5 border-y border-[#8A8C8E]  px-4 py-2">
           <ul className="flex gap-10 justify-center items-center py-3">
             <li>
               <a
                 href="https://www.linkedin.com/in/armejbha/"
-                className="text-2xl font-semibold text-[#DEE2E6BF] hover:text-[#ffc107] hover:underline"
+                className="text-2xl font-semibold text-[#8A8C8E]   hover:text-[#ffc107] hover:underline"
               >
                 LinkedIn
               </a>
@@ -18,7 +19,7 @@ const Footer = () => {
             <li>
               <a
                 href="https://github.com/armejbha"
-                className="text-2xl font-semibold text-[#DEE2E6BF] hover:text-[#ffc107] hover:underline "
+                className="text-2xl font-semibold text-[#8A8C8E]   hover:text-[#ffc107] hover:underline "
               >
                 GitHub
               </a>
@@ -26,7 +27,7 @@ const Footer = () => {
             <li>
               <a
                 href="https://medium.com/@armejbha"
-                className="text-2xl font-semibold text-[#DEE2E6BF] hover:text-[#ffc107] hover:underline"
+                className="text-2xl font-semibold text-[#8A8C8E]   hover:text-[#ffc107] hover:underline"
               >
                 Medium
               </a>
@@ -34,7 +35,7 @@ const Footer = () => {
             <li>
               <a
                 href="https://www.facebook.com/armejbha"
-                className="text-2xl font-semibold text-[#DEE2E6BF] hover:text-[#ffc107] hover:underline"
+                className="text-2xl font-semibold text-[#8A8C8E]   hover:text-[#ffc107] hover:underline"
               >
                 Facebook
               </a>
@@ -55,14 +56,30 @@ const Footer = () => {
           </p>
           <ul className="flex flex-wrap justify-center items-center gap-7">
             <li>
-              <a href="" className=" text-lg hover:text-[#ffc107]">
-                Privacy
-              </a>
+              <Link
+                to="about"
+                smooth={true}
+                duration={500}
+                spy={true}
+                offset={-80}
+                className="text-xl bg-transparent hover:text-[#ffc107] cursor-pointer"
+                activeClass="text-[#ffc107]"
+              >
+                About
+              </Link>
             </li>
             <li>
-              <a href="" className=" text-lg hover:text-[#ffc107]">
-                Terms of Service
-              </a>
+              <Link
+                to="projects"
+                smooth={true}
+                duration={500}
+                spy={true}
+                offset={-80}
+                className="text-xl bg-transparent hover:text-[#ffc107] cursor-pointer"
+                activeClass="text-[#ffc107]"
+              >
+                Projects
+              </Link>
             </li>
           </ul>
         </div>
