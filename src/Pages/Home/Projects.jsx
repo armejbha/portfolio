@@ -146,7 +146,7 @@ const Projects = () => {
   const {data:projects=[], isLoading}=useQuery({
     queryKey:['project'],
     queryFn:async()=>{
-      const res=await axios.get('http://localhost:3000/projects')
+      const res=await axios.get('https://abdur-rahim-backend-3ql5i1nqr-armejbhas-projects.vercel.app/projects')
       return res.data
     }
   })
