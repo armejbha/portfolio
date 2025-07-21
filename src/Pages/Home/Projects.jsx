@@ -146,13 +146,14 @@ const Projects = () => {
   const {data:projects=[], isLoading}=useQuery({
     queryKey:['project'],
     queryFn:async()=>{
-      const res=await axios.get('https://abdur-rahim-backend-3ql5i1nqr-armejbhas-projects.vercel.app/projects')
+      const res=await axios.get('https://abdur-rahim-backend.vercel.app/projects')
       return res.data
     }
   })
 
+  console.log(projects);
 
-if(isLoading)return <p>Data is Loading</p>
+if(isLoading)return <div className="flex justify-center items-center"><span className=" loading loading-spinner loading-lg"></span></div>
 
   return (
     <div id="projects" className="max-w-[1300px] mx-auto my-24 px-4 md:px-0">
