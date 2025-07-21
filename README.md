@@ -43,7 +43,7 @@ I’m a Frontend Web Developer passionate about creating responsive, accessible,
 - ⚛️ React
 - 💨 Tailwind CSS
 - 🌸 DaisyUI
-- 🧭 React Router DOM
+- 🧭 React Router
 
 
 
