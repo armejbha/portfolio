@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-scroll";
+import useTheme from "../../Hooks/useTheme";
 
 const Navbar = () => {
   const activeNav = ({ isActive }) => {

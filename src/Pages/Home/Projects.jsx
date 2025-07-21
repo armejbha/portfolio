@@ -166,15 +166,15 @@ if(isLoading)return <div className="flex justify-center items-center"><span clas
         <div className="w-px h-10 bg-gray-600 opacity-30"></div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
         {projects.map((project) => (
           <div
             key={project._id}
-            className="bg-gray-200 border border-gray-200 rounded-2xl overflow-hidden shadow-xl transition flex flex-col"
+            className="hover:scale-105 transition-all duration-300 bg-gray-200 border border-gray-200 rounded-2xl overflow-hidden shadow-xl flex flex-col"
           >
             <div className="p-4">
               <img
-                className="w-full md:h-[350px] rounded-xl  object-fit"
+                className="w-full h-[140px] rounded-xl  object-fit"
                 src={project.img}
                 alt={project.name}
               />
@@ -182,7 +182,7 @@ if(isLoading)return <div className="flex justify-center items-center"><span clas
             <div className="p-5 grid grid-rows-[auto_1fr_auto] h-full">
               <h2 className="text-2xl font-semibold">{project.name}</h2>
               <p className="text-lg text-gray-600 mt-2">
-                {project.description.slice(0, 90)}...
+                {project.description.slice(0, 70)}...
               </p>
               <button
                 onClick={() => setSelectedProject(project)}
