@@ -5,9 +5,9 @@ const Footer = () => {
   return (
     <div className="max-w-[1300px] mx-auto pt-24 pb-16">
       {/* social links  */}
-      <div className="flex justify-center">
+      <div className="flex  justify-center">
         <div className="w-full md:w-4/5 border-y border-[#8A8C8E]  px-4 py-2">
-          <ul className="flex gap-10 justify-center items-center py-3">
+          <ul className="flex flex-wrap gap-10 justify-center items-center py-3">
             <li>
               <a
                 href="https://www.linkedin.com/in/armejbha/"
