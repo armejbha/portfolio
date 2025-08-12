@@ -88,9 +88,14 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1 space-x-2">{navLinks}</ul>
         </div>
         <div className="navbar-end">
-          <a href="https://drive.google.com/file/d/1IbImq6OBTHPoOxlXtMSNQkseBB0AsZ0S/view?usp=drive_link" target="_blank" className="px-6 py-2 border border-[#8A8C8E]   text-2xl rounded-xl hover:bg-gray-200 hover:cursor-pointer">
-            Resume
-          </a>
+         <a
+  href="https://drive.google.com/uc?export=download&id=1IbImq6OBTHPoOxlXtMSNQkseBB0AsZ0S"
+  target="_blank"
+  className="px-6 py-2 border border-[#8A8C8E] text-2xl rounded-xl hover:bg-gray-200 hover:cursor-pointer"
+>
+  Resume
+</a>
+
           <div className="dropdown dropdown-end">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
               <svg
