@@ -89,8 +89,8 @@ const Navbar = () => {
         </div>
         <div className="navbar-end">
          <a
-  href="https://drive.google.com/uc?export=download&id=1IbImq6OBTHPoOxlXtMSNQkseBB0AsZ0S"
-  target="_blank"
+  href="https://drive.google.com/uc?export=download&id=1q74YaMdpViHrkfIXZXw17humr3R_6kWo
+"
   className="px-6 py-2 border border-[#8A8C8E] text-2xl rounded-xl hover:bg-gray-200 hover:cursor-pointer"
 >
   Resume

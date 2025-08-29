@@ -1,7 +1,10 @@
 import React, { useRef, useEffect } from "react";
 import gsap from "gsap";
 import pic from "../../assets/abdur_rahim.png";
+import pic1 from "../../assets/001.png";
+import pic2 from "../../assets/DSC_01136.JPG";
 import { FiChevronDown } from "react-icons/fi";
+import { FaGithub, FaLinkedin, FaMedium } from "react-icons/fa";
 
 const Banner = ({ scrollToAbout }) => {
   const imageWrapperRef = useRef(null);
@@ -70,12 +73,23 @@ const Banner = ({ scrollToAbout }) => {
               I craft responsive and innovative web interfaces using modern
               tools.
             </p> */}
-            <a
-  href="https://drive.google.com/uc?export=download&id=1IbImq6OBTHPoOxlXtMSNQkseBB0AsZ0S"
+            <div className="flex gap-6 text-5xl mt-4">
+              <a href="https://www.github.com/armejbha" target="_blank">
+                  <FaGithub />
+              </a>
+              <a href="https://www.linkedin.com/in/armejbha/" target="_blank">
+                <FaLinkedin />
+              </a>
+              <a href="https://medium.com/@armejbha" target="_blank">
+                <FaMedium />
+              </a>
+            </div>
+            {/* <a
+  href="https://drive.google.com/uc?export=download&id=1q74YaMdpViHrkfIXZXw17humr3R_6kWo"
   className="px-6 py-2 border border-[#8A8C8E] text-2xl rounded-xl hover:bg-gray-200 hover:cursor-pointer mt-5 block w-fit"
 >
   Resume
-</a>
+</a> */}
 
           </div>
 
@@ -92,7 +106,7 @@ const Banner = ({ scrollToAbout }) => {
                     <div className="rounded-full border-[1px] border-[#ffc107bf] p-[6px]">
                       <img
                         className="bg-amber-50 w-[316px] h-[316px] object-cover rounded-full border border-[#ffc107]"
-                        src={pic}
+                        src={pic2}
                         alt="Profile"
                       />
                     </div>
